@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="indiascore" type="id" />
+    <item name="decreaseindia" type="id" />
+    <item name="canadascore" type="id" />
+    <item name="increasecanada" type="id" />
+    <item name="decreasecanada" type="id" />
+</resources>

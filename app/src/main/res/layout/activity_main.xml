@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/image">
+
+    // include layout on main activity
+
+    <include layout="@layout/toolbar"/>
+
+
+    // First Team name is India
+
+    // Use button for Increase for team india score
+
+    <TextView
+        android:id="@+id/India"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:text="India"
+        android:textColor="#E3E3E3"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/increaseindia"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="+"
+        android:layout_marginTop="10dp"
+        android:onClick="increment"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:background="#929393"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+    // Use button for Decrease for team India score
+    <Button
+        android:id="@+id/decreaseindia"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="-"
+        android:layout_marginTop="10dp"
+        android:onClick="Decrement"
+        android:textSize="34sp"
+        android:background="#929393"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+    // Second Team Name is canada
+    <TextView
+        android:id="@+id/Canada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canada"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#E3E3E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58" />
+    // Use button for Increase for Team Canada
+    <Button
+        android:id="@+id/increasecanada"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="+"
+        android:onClick="increase"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:background="#929393"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805" />
+    // Use button for Decrease for Team canada
+    <Button
+        android:id="@+id/decreasecanada"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="-"
+        android:layout_marginTop="10dp"
+        android:background="#929393"
+        android:textColor="@color/white"
+        android:onClick="decrease"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"/>
+
+    // Use textView for Gamename and Game is Football
+
+    // Use RadioButton for team india score
+
+    <TextView
+        android:id="@+id/Gamename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FOOTBALL"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <RadioButton
+        android:id="@+id/indiascore"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:text="0"
+        android:textColor="#929393"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+    // Use RadioButton for team Canada Score
+    <RadioButton
+        android:id="@+id/canadascore"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:text="0"
+        android:textColor="#929393"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
