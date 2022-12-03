@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="prefs_save_values"
+        android:title="Save Data"
+        android:summary="Save the values on exit"/>
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/Score"
+        android:entryValues="@array/Score_values"
+        android:key="Game Score"
+        android:title="Score"
+        android:summary="Ind vs Can Score"/>
+</PreferenceScreen>

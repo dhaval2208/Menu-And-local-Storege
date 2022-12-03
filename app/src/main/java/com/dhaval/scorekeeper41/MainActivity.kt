@@ -4,8 +4,11 @@
 
 package com.dhaval.scorekeeper41
 
+import android.content.Intent
 import android.content.SharedPreferences
+import androidx.preference.PreferenceManager
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     var canadascore: RadioButton? = null
     var score = 0
     var Goal = 0
+    private lateinit var sharedprefs: SharedPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +47,13 @@ class MainActivity : AppCompatActivity() {
         decreaseindia = findViewById<View>(R.id.decreaseindia) as Button
         increasecanada = findViewById<View>(R.id.increasecanada) as Button
         decreasecanada = findViewById<View>(R.id.decreasecanada) as Button
-        back_arrow = findViewById<View>(R.id.back_arrow) as ImageView
-        toolbar_title = findViewById<View>(R.id.toolbar_title) as TextView
+        //back_arrow = findViewById<View>(R.id.back_arrow) as ImageView
+        //toolbar_title = findViewById<View>(R.id.toolbar_title) as TextView
+
+
+        sharedprefs = PreferenceManager.getDefaultSharedPreferences(this)
+        Log.i("SaveDataValue" , sharedprefs.getBoolean("prefs_save_values" , false).toString())
+        Log.i("Total value" , sharedprefs.getString("prefs_total" , getString(R.string.total_score)).toString())
 
 
 // set back arrow on click
@@ -59,7 +68,10 @@ class MainActivity : AppCompatActivity() {
 
 // set text on toolbar
         toolbar_title?.setText("ScoreKeeper")
+
+
     }
+
 
 
     // increment indiascore
@@ -96,10 +108,10 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.About -> {
-                Toast.makeText(this, "Name :- DHAVAL BHIMANI , Course :- Jav1001", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Name :- DHAVAL BHIMANI , Student id:- A00255187 ,Course :- Jav1001", Toast.LENGTH_SHORT).show()
             }
             R.id.Setting -> {
-                Toast.makeText(this, "Name :- DHAVAL BHIMANI , Course :- Jav1001", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, SettingsActivity::class.java))
             }
 
             else -> return super.onOptionsItemSelected(item)

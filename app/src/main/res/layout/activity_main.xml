@@ -9,7 +9,7 @@
 
     // include layout on main activity
 
-    <include layout="@layout/toolbar"/>
+    <!--<include layout="@layout/toolbar"/>-->
 
 
     // First Team name is India
